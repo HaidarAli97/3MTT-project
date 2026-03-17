@@ -14,11 +14,27 @@ body main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #000000;
  
     img{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border-radius: 50px;
     }
     
+    h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+        p{
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+
+            span{
+                color: #00ff00;
+            }
+        }
 }
