@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mimi Trello | Board</title>
+  <link rel="stylesheet" href="board.css" />
+</head>
+<body>
+  <div class="board-shell">
+    <header class="board-header">
+      <div>
+        <p class="eyebrow">Live task workspace</p>
+        <h1>Board</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="card-details.html">Card Details</a>
+      </nav>
+    </header>
+
+    <section class="board-actions">
+      <div class="stats-panel">
+        <div>
+          <span>Total Lists</span>
+          <strong id="listCount">3</strong>
+        </div>
+        <div>
+          <span>Total Cards</span>
+          <strong id="cardCount">12</strong>
+        </div>
+      </div>
+
+      <form id="addListForm" class="new-list-form">
+        <input type="text" name="title" placeholder="Create a new list" aria-label="New list title" required />
+        <button type="submit">+ Add List</button>
+      </form>
+    </section>
+
+    <main class="board" id="board">
+      <section class="list" data-list="backlog">
+        <div class="list-header">
+          <div>
+            <h2>Backlog</h2>
+            <p class="list-meta">3 cards</p>
+          </div>
+          <span class="pill pill-quiet">Ideas</span>
+        </div>
+
+        <div class="cards" aria-label="Backlog cards">
+          <article class="card" draggable="true" data-title="Refresh onboarding flow" data-priority="High" data-tag="Design" data-description="Refine the welcome sequence with visual milestones.">
+            <div class="card-top">
+              <span class="pill pill-soft">Design</span>
+              <span class="priority high">High</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Refresh onboarding flow</a></h3>
+            <p>Refine the welcome sequence with visual milestones.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Audit user feedback" data-priority="Mid" data-tag="Research" data-description="Compile the latest round of product reviews.">
+            <div class="card-top">
+              <span class="pill pill-soft">Research</span>
+              <span class="priority medium">Mid</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Audit user feedback</a></h3>
+            <p>Compile the latest round of product reviews.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Build competitive roadmap" data-priority="Low" data-tag="Planning" data-description="Outline the next sprint with stretch goals.">
+            <div class="card-top">
+              <span class="pill pill-soft">Planning</span>
+              <span class="priority low">Low</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Build competitive roadmap</a></h3>
+            <p>Outline the next sprint with stretch goals.</p>
+          </article>
+        </div>
+
+        <form class="card-form">
+          <textarea placeholder="New task title" rows="2" required></textarea>
+          <button type="button" class="add-card-button">Add task</button>
+        </form>
+      </section>
+
+      <section class="list" data-list="in-progress">
+        <div class="list-header">
+          <div>
+            <h2>In Progress</h2>
+            <p class="list-meta">4 cards</p>
+          </div>
+          <span class="pill pill-quiet">Active</span>
+        </div>
+
+        <div class="cards" aria-label="In Progress cards">
+          <article class="card" draggable="true" data-title="Animate board transitions" data-priority="High" data-tag="Frontend" data-description="Add smooth entry and hover animations to cards.">
+            <div class="card-top">
+              <span class="pill pill-soft">Frontend</span>
+              <span class="priority high">High</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Animate board transitions</a></h3>
+            <p>Add smooth entry and hover animations to cards.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Sync cards with storage" data-priority="Mid" data-tag="Backend" data-description="Enable state persistence across refreshes.">
+            <div class="card-top">
+              <span class="pill pill-soft">Backend</span>
+              <span class="priority medium">Mid</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Sync cards with storage</a></h3>
+            <p>Enable state persistence across refreshes.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Run UI performance checks" data-priority="Mid" data-tag="QA" data-description="Validate responsive board animations.">
+            <div class="card-top">
+              <span class="pill pill-soft">QA</span>
+              <span class="priority medium">Mid</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Run UI performance checks</a></h3>
+            <p>Validate responsive board animations.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Polish task labels" data-priority="Low" data-tag="Ops" data-description="Ensure tag visibility and color balance.">
+            <div class="card-top">
+              <span class="pill pill-soft">Ops</span>
+              <span class="priority low">Low</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Polish task labels</a></h3>
+            <p>Ensure tag visibility and color balance.</p>
+          </article>
+        </div>
+
+        <form class="card-form">
+          <textarea placeholder="New task title" rows="2" required></textarea>
+          <button type="button" class="add-card-button">Add task</button>
+        </form>
+      </section>
+
+      <section class="list" data-list="done">
+        <div class="list-header">
+          <div>
+            <h2>Done</h2>
+            <p class="list-meta">5 cards</p>
+          </div>
+          <span class="pill pill-quiet">Complete</span>
+        </div>
+
+        <div class="cards" aria-label="Done cards">
+          <article class="card" draggable="true" data-title="Deploy the board theme" data-priority="Low" data-tag="Launch" data-description="Release the new dark aesthetic across the app.">
+            <div class="card-top">
+              <span class="pill pill-soft">Launch</span>
+              <span class="priority low">Low</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Deploy the board theme</a></h3>
+            <p>Release the new dark aesthetic across the app.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Write release notes" data-priority="Low" data-tag="Support" data-description="Summarize the premium board features.">
+            <div class="card-top">
+              <span class="pill pill-soft">Support</span>
+              <span class="priority low">Low</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Write release notes</a></h3>
+            <p>Summarize the premium board features.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Review competitor decks" data-priority="Mid" data-tag="Growth" data-description="Identify opportunities in product positioning.">
+            <div class="card-top">
+              <span class="pill pill-soft">Growth</span>
+              <span class="priority medium">Mid</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Review competitor decks</a></h3>
+            <p>Identify opportunities in product positioning.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Finalize motion system" data-priority="High" data-tag="Design" data-description="Lock animations for the next launch cycle.">
+            <div class="card-top">
+              <span class="pill pill-soft">Design</span>
+              <span class="priority high">High</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Finalize motion system</a></h3>
+            <p>Lock animations for the next launch cycle.</p>
+          </article>
+          <article class="card" draggable="true" data-title="Capture team wins" data-priority="Low" data-tag="Growth" data-description="Celebrate momentum with visible progress.">
+            <div class="card-top">
+              <span class="pill pill-soft">Growth</span>
+              <span class="priority low">Low</span>
+            </div>
+            <h3><a class="card-link" href="card-details.html">Capture team wins</a></h3>
+            <p>Celebrate momentum with visible progress.</p>
+          </article>
+        </div>
+
+        <form class="card-form">
+          <textarea placeholder="New task title" rows="2" required></textarea>
+          <button type="button" class="add-card-button">Add task</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="drag-and-drop.js"></script>
+</body>
+</html>

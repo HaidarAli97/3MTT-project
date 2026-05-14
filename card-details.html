@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mimi Trello | Card Details</title>
+  <link rel="stylesheet" href="card.css" />
+</head>
+<body>
+  <div class="card-shell">
+    <header class="mini-nav">
+      <a href="index.html">Home</a>
+      <a href="board.html">Board</a>
+    </header>
+
+    <section class="card-preview" id="cardPreview">
+      <span class="pill pill-soft">Selected card</span>
+      <h1 id="cardTitle">No card selected</h1>
+      <p id="cardDescription">Open the board, click a card, and see its details here.</p>
+      <div class="detail-meta">
+        <div>
+          <span>Priority</span>
+          <strong id="cardPriority">—</strong>
+        </div>
+        <div>
+          <span>Tag</span>
+          <strong id="cardTag">—</strong>
+        </div>
+      </div>
+      <a class="button" href="board.html">Back to board</a>
+    </section>
+  </div>
+
+  <script src="card.js"></script>
+</body>
+</html>
